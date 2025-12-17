@@ -27,12 +27,34 @@
     justify-content: space-between;
     align-items: center;
 }
-.nav .logo{
-    width: 160px;
-    cursor: pointer;
-    margin-top: -3%;
-    margin-left: -2%;
+
+.logo-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: -2%;
+    margin-left: -2%
+    
 }
+.logo{
+    width: 120px;
+    margin-bottom: -2px;
+    display: block;
+    cursor: pointer;
+    
+}
+.logo-text{
+    line-height: 1;
+    margin-top: -2px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(60, 60, 134);
+    font-style: oblique;
+    cursor: pointer;
+}
+
 ul{
     margin-top: -4%;
 }
@@ -69,6 +91,13 @@ ul li a:hover{
     line-height: 24px;
 }
 
+.info h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: darkolivegreen;
+    
+}
 .info  h3 span{
     color: rgb(230, 104, 59);
     font-size: 18px;

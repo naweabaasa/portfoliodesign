@@ -12,7 +12,9 @@
 }
 .main{
     width: 100%;
-   background: rgb(125, 159, 164);
+    background-image: url("../images_folder/about.jpg");
+    background-position: center;
+    background-size: cover;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
@@ -25,12 +27,33 @@
     justify-content: space-between;
     align-items: center;
 }
-.nav .logo{
-    width: 160px;
-    cursor: pointer;
-    margin-top: -3%;
-    margin-left: -2%;
+.logo-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: -2%;
+    margin-left: -2%
+    
 }
+.logo{
+    width: 120px;
+    margin-bottom: -2px;
+    display: block;
+    cursor: pointer;
+    
+}
+.logo-text{
+    line-height: 1;
+    margin-top: -2px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(60, 60, 134);
+    font-style: oblique;
+    cursor: pointer;
+}
+
 ul{
     margin-top: -4%;
 }

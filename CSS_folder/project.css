@@ -13,8 +13,9 @@
 
 .main{
     width: 100%;
-    background: #767d8f;
-
+    background-image: url("../images_folder/skills.jpg");
+    background-position: center;
+    background-size: cover;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
@@ -29,12 +30,33 @@
     align-items: center;
 }
 
-.nav .logo{
-    width: 160px;
-    cursor: pointer;
-    margin-top: -3%;
-    margin-left: -2%;
+.logo-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: -2%;
+    margin-left: -2%
+    
 }
+.logo{
+    width: 120px;
+    margin-bottom: -2px;
+    display: block;
+    cursor: pointer;
+    
+}
+.logo-text{
+    line-height: 1;
+    margin-top: -2px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(60, 60, 134);
+    font-style: oblique;
+    cursor: pointer;
+}
+
 ul{
     margin-top: -4%;
 }
@@ -75,8 +97,8 @@ h1{
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: transparent;
     letter-spacing: 4px;
-    background-color: rgb(4, 52, 83);
     background: pink;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -159,13 +181,14 @@ h1:after{
 .card:hover i{
     color: #00ff37;
 }
-@media screen (max-width:1200px) {
+@media (max-width:1200px) {
     .cards{
         grid-template-columns:repeat(2,1fr)
     }
 }
 
-@media screen(max-width:1200px) {
+
+@media (max-width: 1200px) {
     .cards{
         grid-template-columns:repeat(2,1fr)
     }
