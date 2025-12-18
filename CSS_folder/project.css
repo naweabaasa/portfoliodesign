@@ -181,6 +181,23 @@ h1:after{
 .card:hover i{
     color: #00ff37;
 }
+
+
+.learn-more-btn{
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s eas;
+    
+}
+
+.leran-more-btn:hover{
+    background-color: #ac34ae;
+}
 @media (max-width:1200px) {
     .cards{
         grid-template-columns:repeat(2,1fr)
