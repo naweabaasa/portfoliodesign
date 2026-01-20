@@ -137,7 +137,13 @@ ul li a:hover{
     background-color: #34a853;
 }
 
+.github-icon{
+    background-color: #000000;
+}
 
+.linkedin-icon{
+    background-color: #077;
+}
 
 .info .value{
     font-size: 14px;
