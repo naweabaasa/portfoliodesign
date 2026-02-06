@@ -127,25 +127,25 @@ h2{
     transition: width 1.5s ease-in-out;
 }
 
-.css-fill{
+.graphics-fill{
     width: 70%;
     background-color: purple;
-    animation: css 2s;
+    animation: graphics 2s;
 }
 
-.html-fill{
+.python-fill{
     width: 80%;
     background-color: orange;
-    animation: html 2s;
+    animation: python 2s;
 }
 
-.js-fill{
+.data_science-fill{
     width: 50%;
     background-color: green;
-    animation: js 2s;
+    animation: data_science 2s;
 }
 
-@keyframes html {
+@keyframes python {
   from{
         width: 0;
     }
@@ -154,7 +154,7 @@ h2{
     }
 }
 
-@keyframes css {
+@keyframes graphics {
   from{
         width: 0;
     }
@@ -163,7 +163,7 @@ h2{
     }
 }
 
-@keyframes js {
+@keyframes data_science {
   from{
         width: 0;
     }
