@@ -165,19 +165,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const name = document.getElementById('name');
             const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
             const message = document.getElementById('message');
             const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-            // Simple client-side validation
-            if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-                showToast('Please fill in all required fields.', 'error');
+            // Simple client-side validation (Name & Message required)
+            if (!name.value.trim() || !message.value.trim()) {
+                showToast('Please provide your name and a message.', 'error');
                 return;
             }
 
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email.value.trim())) {
-                showToast('Please provide a valid email address.', 'error');
-                return;
+            // If an email is provided, validate its format
+            if (email && email.value.trim()) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email.value.trim())) {
+                    showToast('Please provide a valid email address or leave it blank.', 'error');
+                    return;
+                }
             }
 
             // Simulate sending with reactive button feedback
@@ -202,5 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             toast.className = 'toast';
         }, 4000);
+    }
+
+    // -------------------------------------------------------------
+    // 6. Smooth Back-to-Top Navigation
+    // -------------------------------------------------------------
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
 });

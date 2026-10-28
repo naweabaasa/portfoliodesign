@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../CSS_folder/contact.css">
 </head>
+
 <body>
     <div class="main">
         <header class="navbar">
@@ -43,7 +46,8 @@
             <div class="section-title">
                 <h2>Get In <span>Touch</span></h2>
                 <div class="underline"></div>
-                <p class="section-subtitle">Have a project in mind, an opportunity, or just want to connect? Reach out below!</p>
+                <p class="section-subtitle">Have a project in mind, an opportunity, or just want to connect? Reach out
+                    below!</p>
             </div>
 
             <div class="contact-container">
@@ -69,7 +73,8 @@
                             </div>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/" target="_blank"
+                            rel="noopener noreferrer" class="contact-item">
                             <div class="icon linkedin-icon"><i class="fab fa-linkedin-in"></i></div>
                             <div class="item-text">
                                 <span class="label">LinkedIn</span>
@@ -77,7 +82,8 @@
                             </div>
                         </a>
 
-                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
                             <div class="icon github-icon"><i class="fab fa-github"></i></div>
                             <div class="item-text">
                                 <span class="label">GitHub</span>
@@ -85,7 +91,8 @@
                             </div>
                         </a>
 
-                        <a href="https://maps.google.com/?q=Kampala,+Uganda" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <a href="https://maps.google.com/?q=Kampala,+Uganda" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
                             <div class="icon location-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="item-text">
                                 <span class="label">Location</span>
@@ -105,13 +112,20 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                            <label for="email">Your Email <span class="optional-tag">(Optional)</span></label>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone / Contact Number <span
+                                    class="optional-tag">(Optional)</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="+256 700 000 000">
                         </div>
 
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="How can I assist you with your project?" required></textarea>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="How can I assist you ?" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-submit">
@@ -122,8 +136,45 @@
             </div>
         </section>
 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../images_folder/logg.png" alt="Nawe Logo">
+                        <span>Nawe</span>
+                    </a>
+
+                    <ul class="footer-nav">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="footer-socials">
+                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/AbaasaNawe25903" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/naweabaasa" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Nawe Abaasa. All Rights Reserved.</p>
+                    <a href="#" class="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </footer>
+
         <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/256771385851" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Nawe on WhatsApp">
+        <a href="https://wa.me/256771385851" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+            aria-label="Chat with Nawe on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
 
@@ -134,4 +185,5 @@
     <!-- Reactive Script -->
     <script src="../java_script_folder/script.js"></script>
 </body>
+
 </html>
