@@ -1,0 +1,4 @@
+# Backup & Temp Files
+images_folder/*_backup.jpg
+*.tmp
+.DS_Store

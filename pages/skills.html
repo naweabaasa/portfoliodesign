@@ -1,53 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>skill_bar</title>
-  <link rel="stylesheet" href="../CSS_folder/skills.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Expertise | Nawe Abaasa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../CSS_folder/skills.css">
 </head>
+
 <body>
-  <div class="main">
-    <div class="navbar">
-        <div class="logo-box">
-        <img src="../images_folder/logg.png" alt="logo" class="logo">
-        <p class="logo-text"> Nawe</p>
-    </div>
-        
-   <ul>
-    <li> <a href="/portfoliodesign/index.html">Home</a></li>
-    <li> <a href="/portfoliodesign/pages/about.html">About</a></li>
-    <li> <a href="/portfoliodesign/pages/skills.html">Skills</a></li>
-    <li> <a href="/portfoliodesign/pages/projects.html">Projects</a></li>
-    <li> <a href="/portfoliodesign/pages/contact.html">Contact</a></li>
-  </ul>
-  </div>
-  
-  <div class="skills section">
-    <h2>My Skills</h2>
+    <div class="main">
+        <header class="navbar">
+            <a href="../index.html" class="logo-box">
+                <img src="../images_folder/logg.png" alt="Nawe Logo" class="logo">
+                <span class="logo-text">Nawe</span>
+            </a>
 
-  <div class="skill">
-    <div class="bar">
-      <span class="label">PYTHON</span>
-      <div class="fill python-fill"></div>
-    </div>
-  </div>
+            <!-- Mobile Hamburger Toggle -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-  <div class="skill">
-    <div class="bar">
-      <span class="label">DATA SCIENCE</span>
-      <div class="fill data_science-fill"></div>
-    </div>
-  </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html" class="active">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <div class="skill">
-    <div class="bar">
-      <span class="label">GRAPHICS</span>
-      <div class="fill graphics-fill"></div>
-    </div>
-  </div>
-  </div>
+        <section class="skills-section">
+            <div class="section-title">
+                <h2>Technical <span>Skills</span></h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">A showcase of my technical toolkit, analytical problem solving, and design
+                    proficiency.</p>
+            </div>
 
-    </div>  
+            <div class="skills-wrapper">
+                <!-- Skill Bars Card -->
+                <div class="skills-card">
+                    <h3 class="card-heading"><i class="fas fa-laptop-code"></i> Core Competencies</h3>
+
+                    <!-- Python -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fab fa-python skill-icon python-color"></i> Python
+                                Programming</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="skill-fill python-fill" data-percent="85"></div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-code skill-icon web-color"></i> Web Development
+                                (HTML, CSS, ReactJS)</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="skill-fill web-fill" data-percent="90"></div>
+                        </div>
+                    </div>
+
+                    <!-- Data Science -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-database skill-icon ds-color"></i> Data Science &
+                                Analytics</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="skill-fill data_science-fill" data-percent="75"></div>
+                        </div>
+                    </div>
+
+                    <!-- Mathematical Computing -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-square-root-variable skill-icon math-color"></i>
+                                Mathematical Computing</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="skill-fill math-fill" data-percent="70"></div>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-palette skill-icon graphics-color"></i> Graphics
+                                Design</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="skill-fill graphics-fill" data-percent="95"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Frameworks Pill Section -->
+                <div class="tools-card">
+                    <h3 class="card-heading"><i class="fas fa-toolbox"></i> Tools & Practices</h3>
+                    <div class="tools-grid">
+                        <div class="tool-tag"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                        <div class="tool-tag"><i class="fas fa-desktop"></i> Responsive Web Design</div>
+                        <div class="tool-tag"><i class="fas fa-terminal"></i> VS Code</div>
+                        <div class="tool-tag"><i class="fas fa-chart-pie"></i> Data Visualization</div>
+                        <div class="tool-tag"><i class="fas fa-brain"></i> Algorithmic Logic</div>
+                        <div class="tool-tag"><i class="fas fa-vector-square"></i> UI / Composition</div>
+                        <div class="tool-tag"><i class="fas fa-check-circle"></i> Continuous Learning</div>
+                        <div class="tool-tag"><i class="fas fa-comments"></i> Technical Communication</div>
+                    </div>
+
+                    <div class="skills-cta">
+                        <p>Interested in seeing these skills in practice?</p>
+                        <a href="projects.html" class="btn btn-primary">Check Out My Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills Section -->
+            <div class="soft-skills-section">
+                <h3 class="soft-skills-heading"><i class="fas fa-heart-pulse"></i> Soft <span>Skills</span></h3>
+                <div class="soft-skills-grid">
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-comments"></i></div>
+                        <h4>Communication</h4>
+                        <p>Clearly expressing ideas verbally and in writing, and actively listening to others.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-people-group"></i></div>
+                        <h4>Teamwork</h4>
+                        <p>Collaborating effectively with peers, sharing responsibilities and supporting group goals.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Problem Solving</h4>
+                        <p>Breaking down complex challenges analytically and finding creative, logical solutions.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Time Management</h4>
+                        <p>Prioritising tasks effectively to meet deadlines while maintaining quality output.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-arrows-rotate"></i></div>
+                        <h4>Adaptability</h4>
+                        <p>Quickly picking up new tools, frameworks, and concepts in a fast-changing tech landscape.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-magnifying-glass"></i></div>
+                        <h4>Attention to Detail</h4>
+                        <p>Ensuring precision and quality in design, code, and documentation at every step.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <h4>Creativity</h4>
+                        <p>Bringing fresh ideas and a design-oriented mindset to every project I work on.</p>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-icon"><i class="fas fa-book-open-reader"></i></div>
+                        <h4>Continuous Learning</h4>
+                        <p>Staying curious, self-motivated, and committed to growing every day as a developer.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Reactive Script -->
+    <script src="../java_script_folder/script.js"></script>
 </body>
+
 </html>

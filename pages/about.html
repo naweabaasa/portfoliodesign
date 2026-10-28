@@ -3,40 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about_me</title>
+    <title>About Me | Nawe Abaasa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../CSS_folder/about.css">
 </head>
 <body>
-  <div class="main">
-    <div class="navbar">
-        <div class="logo-box">
-        <img src="../images_folder/logg.png" alt="logo" class="logo">
-        <p class="logo-text"> Nawe</p>
-    </div>
-        
-   <ul>
-    <li> <a href="/portfoliodesign/index.html">Home</a></li>
-    <li> <a href="/portfoliodesign/pages/about.html">About</a></li>
-    <li> <a href="/portfoliodesign/pages/skills.html">Skills</a></li>
-    <li> <a href="/portfoliodesign/pages/projects.html">Projects</a></li>
-    <li> <a href="/portfoliodesign/pages/contact.html">Contact</a></li>
-  </ul>
-  </div>
-  <div class="title">
-  <h3>About <span>Me</span></h3>
-  </div>
-  <div class="image">
-        <img src="../images_folder/aboutpic.png" alt="pic" width="300px" height="300px">
-   </div >
+    <div class="main">
+        <header class="navbar">
+            <a href="../index.html" class="logo-box">
+                <img src="../images_folder/logg.png" alt="Nawe Logo" class="logo">
+                <span class="logo-text">Nawe</span>
+            </a>
 
-  <div class="info">
-    <h1>COMPUTER SCIENTIST</h1>
-    <p>I craft digital experiences where design meets functionality. <br>I am a passionate WITU student who loves combining creativity with technology. <br>From web design to data science, I enjoy building projects that are both visually engaging and technically strong, <br>always striving for clarity, polish, and impact.As a web developer, <br>I turn ideas into clean, responsive, and engaging websites that work seamlessly across devices. <br>
-</p>   
-   </div>
-   
-<button class="my-button"> <a href="/pages/projects.html">Read More</a></button>
+            <!-- Mobile Hamburger Toggle -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="about-section">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="about-container">
+                <div class="about-image-wrapper">
+                    <div class="image-frame">
+                        <img src="../images_folder/profile.png" alt="Nawe Abaasa" class="about-img">
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="badge">Computer Science</span>
+                    <h3>I craft digital experiences where design meets functionality.</h3>
+                    <p class="about-desc">
+                        I am a passionate student at WITI who loves combining creativity with technical problem solving. 
+                        From front-end web design to data science and mathematical computing, I enjoy building solutions 
+                        that are both visually engaging and logically sound.
+                    </p>
+                    <p class="about-desc">
+                        As an aspiring developer, I turn ideas into clean, responsive, and intuitive web applications 
+                        that work seamlessly across all screen sizes. I am dedicated to continuous learning, attention to detail, 
+                        and building impactful digital products.
+                    </p>
+
+                    <!-- Key Info Highlights Grid -->
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h4>Institution</h4>
+                                <p>WITI</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Specialization</h4>
+                                <p>Web & Python</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Interests</h4>
+                                <p>Data & Math Computing</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Kampala, Uganda</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <a href="projects.html" class="btn btn-primary">View My Projects</a>
+                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!-- Reactive Script -->
+    <script src="../java_script_folder/script.js"></script>
 </body>
 </html>

@@ -3,81 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <title>Contact Me | Nawe Abaasa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../CSS_folder/contact.css">
-    <!-- font awesome CDN -->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body>
     <div class="main">
-    <div class="navbar">
-        <div class="logo-box">
-        <img src="../images_folder/logg.png" alt="logo" class="logo">
-        <p class="logo-text"> Nawe</p>
-    </div>    
-   <ul>
-    <li> <a href="/portfoliodesign/index.html">Home</a></li>
-    <li> <a href="/portfoliodesign/pages/about.html">About</a></li>
-    <li> <a href="/portfoliodesign/pages/skills.html">Skills</a></li>
-    <li> <a href="/portfoliodesign/pages/projects.html">Projects</a></li>
-    <li> <a href="/portfoliodesign/pages/contact.html">Contact</a></li>
-  </ul>
-  </div>
+        <header class="navbar">
+            <a href="../index.html" class="logo-box">
+                <img src="../images_folder/logg.png" alt="Nawe Logo" class="logo">
+                <span class="logo-text">Nawe</span>
+            </a>
 
-  <h2 class="title"> Contact Information</h2>
-  <div class="contact-card">
-  <div class="contact-item">
-  <div class="icon email-icon">
-    <a href="mailto:abaasanawe123@gmail.com"><i class="fas fa-envelope"></i> 
-</a>
-    </div>
-    <div class="info">
-        <p class="value"><a href="mailto:abaasanawe123@gmail.com">abaasanawe123@gmail.com</a> </p>
-    </div>
-</div>
+            <!-- Mobile Hamburger Toggle -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-<div class="contact-item">
-  <div class="icon phone-icon">
-  <a href="tel:+256771385851"> <i class="fas fa-phone-alt"></i></a>
-    </div>
-    <div class="info">
-        <p class="value"><a href="tel:+256771385851">+256771385851</a></p>
-    </div>
-</div>
-<div class="contact-item">
-  <div class="icon linkedin-icon">
-    <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="info">
-        <p class="value"><a href="https://www.linkedin.com/in/nawe-abaasa-955109384/">nawe</a></p>
-    </div>
-</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<div class="contact-item">
-  <div class="icon github-icon">
-    <a href="https://github.com/naweabaasa"><i class="fab fa-github-square"></i>
-    </a>
-    </div>
-    <div class="info">
-        <p class="value"><a href="https://github.com/naweabaasa">naweabaasa</a> </p>
-    </div>
-</div>
+        <section class="contact-section">
+            <div class="section-title">
+                <h2>Get In <span>Touch</span></h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Have a project in mind, an opportunity, or just want to connect? Reach out below!</p>
+            </div>
 
-<div class="contact-item">
-  <div class="icon location-icon active">
-    <a href="https://maps.google.com/?q=Kampala, Uganda"><i class="fas fa-map-marker-alt"></i></a>
+            <div class="contact-container">
+                <!-- Left Column: Contact Cards -->
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    <p class="info-desc">Feel free to reach out directly through any of the channels below.</p>
+
+                    <div class="contact-list">
+                        <a href="mailto:abaasanawe123@gmail.com" class="contact-item">
+                            <div class="icon email-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="item-text">
+                                <span class="label">Email</span>
+                                <span class="val">abaasanawe123@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:+256771385851" class="contact-item">
+                            <div class="icon phone-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="item-text">
+                                <span class="label">Phone / WhatsApp</span>
+                                <span class="val">+256 771 385 851</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <div class="icon linkedin-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="item-text">
+                                <span class="label">LinkedIn</span>
+                                <span class="val">Nawe Abaasa</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <div class="icon github-icon"><i class="fab fa-github"></i></div>
+                            <div class="item-text">
+                                <span class="label">GitHub</span>
+                                <span class="val">naweabaasa</span>
+                            </div>
+                        </a>
+
+                        <a href="https://maps.google.com/?q=Kampala,+Uganda" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <div class="icon location-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="item-text">
+                                <span class="label">Location</span>
+                                <span class="val">Kampala, Uganda</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Contact Form -->
+                <div class="contact-form-card">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="How can I assist you with your project?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/256771385851" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Nawe on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Interactive Toast Feedback -->
+        <div id="toast" class="toast"></div>
     </div>
-    <div class="info">
-        <p class="value"><a href="https://maps.google.com/?q=Kampala, Uganda">Kampala, Uganda </a></p>
-    </div>
-</div>
-<a href="https://wa.me/256771385851"
-class="whatsapp-float"
-target="blank"
-aria-label="Chat on Whatsapp"
->
-<i class="fab fa-whatsapp"></i>
-</a>
-  </div>
+
+    <!-- Reactive Script -->
+    <script src="../java_script_folder/script.js"></script>
 </body>
 </html>

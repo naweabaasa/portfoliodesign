@@ -3,70 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects</title>
-  <link rel="stylesheet" href="../CSS_folder/project.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
-    </head>
-    
+    <title>Featured Projects | Nawe Abaasa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../CSS_folder/project.css">
+</head>
 <body>
-  <div class="main">
-    <div class="navbar">
-        <div class="logo-box">
-        <img src="../images_folder/logg.png" alt="logo" class="logo">
-        <p class="logo-text"> Nawe</p>
-    </div>     
-   <ul>
-    <li> <a href="/portfoliodesign/index.html">Home</a></li>
-    <li> <a href="/portfoliodesign/pages/about.html">About</a></li>
-    <li> <a href="/portfoliodesign/pages/skills.html">Skills</a></li>
-    <li> <a href="/portfoliodesign/pages/projects.html">Projects</a></li>
-    <li> <a href="/portfoliodesign/pages/contact.html">Contact</a></li>
-  </ul>
-  </div>
-  
-  <div class="container">
-    <div  class="project-wrapper">
-      <div class="project">
-        <h1>My Projects</h1>
-        
-        <div class="cards">
-          <div class="card">
-         <i class="fa-solid fa-layer-group"></i>
-         <h2>WebSite Development</h2>
-         <p>I craft digital experiences that blend clarity, color, and curiosity. Each project is a small world of ideas shaped into clean, responsive design. Dive in and explore the work that inspires me to keep creating.</p>
-            <a href="http://127.0.0.1:5502/form.html" class="learn-more-btn">Learn More</a>
-        </div>
-      <div class="card">
-         <i class="fa-solid fa-camera"></i>
-         <h2>Graphic Design</h2>
-         <p>I shape ideas into bold, expressive visuals that speak with clarity and personality. Each project is a blend of color, composition, and storytelling, crafted to capture attention and communicate with purpose. Explore the work below to see how I turn concepts into striking design.</p>
-         <a href="../images_folder/gd.png" class="learn-more-btn">Learn More</a>
-        </div>
+    <div class="main">
+        <header class="navbar">
+            <a href="../index.html" class="logo-box">
+                <img src="../images_folder/logg.png" alt="Nawe Logo" class="logo">
+                <span class="logo-text">Nawe</span>
+            </a>
 
-      <div class="card">
-         <i class="fa-solid fa-database"></i>
-         <h2>Data Science</h2>
-         <p>I work with data science to explore datasets, uncover patterns, and build simple models that turn information into clear insights. Using Python and analytical tools, I enjoy solving problems and making data more meaningful.</p>
-           <a href="#" class="learn-more-btn">Learn More</a>
-        </div>
+            <!-- Mobile Hamburger Toggle -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-        <div class="card">
-         <i class="fa-solid fa-python"></i>
-         <h2>Python</h2>
-         <p>I use Python to solve problems, automate tasks, and work with data in a clear and efficient way. It helps me explore ideas quickly, build small tools, and apply logical thinking to real challenges. Its simplicity and power make it one of my most reliable skills.</p>
-             <a href="https://github.com/naweabaasa/pythoninitialassignment" class="learn-more-btn">Learn More</a>    
-        </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        
-      <div class="card">
-         <i class="fa-solid fa-gear"></i>
-         <h2>Others</h2>
-         <p>I also work comfortably with mathematical computing, to analyze problems, work with numerical methods, and understand patterns through logic and precision. It helps me break down complex ideas, model real‑world situations, and apply clear reasoning to technical challenges..</p>
-              <a href="#" class="learn-more-btn">Learn More</a>  
+        <section class="projects-section">
+            <div class="section-title">
+                <h2>Featured <span>Projects</span></h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">A collection of technical solutions, web designs, Python scripts, and visual concepts.</p>
+            </div>
+
+            <!-- Reactive Category Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="datascience">Data Science</button>
+                <button class="filter-btn" data-filter="graphics">Graphics</button>
+                <button class="filter-btn" data-filter="math">Math Computing</button>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1: Web Dev -->
+                <div class="project-card" data-category="web">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="card-content">
+                        <span class="category-tag">Web Development</span>
+                        <h3>Interactive Web Portfolio</h3>
+                        <p>A responsive, multi-page web platform featuring interactive layouts, modern typography, mobile navigation, and optimized assets.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/naweabaasa/portfoliodesign" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                        <a href="../index.html" class="btn-card btn-outline">
+                            <i class="fas fa-eye"></i> Live View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Python Assignment -->
+                <div class="project-card" data-category="python">
+                    <div class="card-icon"><i class="fa-brands fa-python"></i></div>
+                    <div class="card-content">
+                        <span class="category-tag">Python</span>
+                        <h3>Python Initial Assignment</h3>
+                        <p>Core programming logic, algorithmic scripts, and automated problem-solving routines demonstrating fundamental Python concepts.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Algorithms</span>
+                            <span>CLI</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/naweabaasa/pythoninitialassignment" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fab fa-github"></i> GitHub Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Graphic Design -->
+                <div class="project-card" data-category="graphics">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <div class="card-content">
+                        <span class="category-tag">Graphic Design</span>
+                        <h3>Visual Identity & Branding</h3>
+                        <p>Bold visual compositions, digital branding assets, color storytelling, and graphic media crafted for impact and clarity.</p>
+                        <div class="tech-stack">
+                            <span>Design</span>
+                            <span>Color Theory</span>
+                            <span>Branding</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../images_folder/gd.png" target="_blank" class="btn-card">
+                            <i class="fas fa-image"></i> View Graphic
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Data Science -->
+                <div class="project-card" data-category="datascience">
+                    <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div class="card-content">
+                        <span class="category-tag">Data Science</span>
+                        <h3>Exploratory Data Analysis</h3>
+                        <p>Dataset inspection, pattern recognition, and statistical visualization turning raw numbers into meaningful insights and models.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Analytics</span>
+                            <span>DataViz</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fab fa-github"></i> Explore Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Mathematical Computing -->
+                <div class="project-card" data-category="math">
+                    <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="card-content">
+                        <span class="category-tag">Mathematical Computing</span>
+                        <h3>Numerical Methods & Logic</h3>
+                        <p>Computational problem solving, modeling real-world problems with numerical methods, precision logic, and algorithmic reasoning.</p>
+                        <div class="tech-stack">
+                            <span>Math</span>
+                            <span>Logic</span>
+                            <span>Computing</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fab fa-github"></i> Explore Logic
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </div>
-  </div>
-</div>
 
+    <!-- Reactive Script -->
+    <script src="../java_script_folder/script.js"></script>
 </body>
 </html>
