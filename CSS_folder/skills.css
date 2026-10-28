@@ -374,37 +374,37 @@ nav ul li a.active {
 
 .soft-skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
 }
 
 .soft-skill-card {
     background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 26px 20px;
+    border-radius: 14px;
+    padding: 20px 16px;
     text-align: center;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .soft-skill-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
     border-color: #e6683b;
-    box-shadow: 0 12px 30px rgba(230, 104, 59, 0.2);
+    box-shadow: 0 10px 25px rgba(230, 104, 59, 0.2);
 }
 
 .soft-icon {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: rgba(230, 104, 59, 0.15);
     border: 1px solid rgba(230, 104, 59, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px;
-    font-size: 22px;
+    margin: 0 auto 12px;
+    font-size: 20px;
     color: #e6683b;
     transition: background 0.3s ease;
 }
@@ -414,16 +414,10 @@ nav ul li a.active {
 }
 
 .soft-skill-card h4 {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
     color: #f1f5f9;
-    margin-bottom: 8px;
-}
-
-.soft-skill-card p {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #94a3b8;
+    margin: 0;
 }
 
 /* ==========================================================================

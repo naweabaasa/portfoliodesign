@@ -1,7 +1,9 @@
 /* ==========================================================================
    Base Styles & Reset
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -255,28 +257,34 @@ nav ul li a.active {
     margin-bottom: 18px;
 }
 
-.category-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #38bdf8;
-    background: rgba(56, 189, 248, 0.1);
-    padding: 4px 10px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-.card-content h3 {
-    font-size: 20px;
+.card-content h3.card-main-title {
+    font-size: 24px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.card-content .work-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 14px;
 }
 
 .card-content p {
     font-size: 14px;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 18px;
+}
     line-height: 1.6;
     color: #94a3b8;
     margin-bottom: 18px;
@@ -340,6 +348,286 @@ nav ul li a.active {
 }
 
 /* ==========================================================================
+   Graphics Modal Gallery
+   ========================================================================== */
+
+/* ---------- Overlay ---------- */
+.gmodal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(5, 8, 15, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 16px 30px;
+    overflow-y: auto;
+}
+
+.gmodal-overlay.active {
+    display: flex;
+}
+
+/* ---------- Modal Box ---------- */
+.gmodal-box {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    animation: gmodalSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes gmodalSlideIn {
+    from { opacity: 0; transform: translateY(-40px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* ---------- Header ---------- */
+.gmodal-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.gmodal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.gmodal-title i {
+    color: #e6683b;
+    font-size: 20px;
+}
+
+/* ---------- Tab bar ---------- */
+.gmodal-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.gtab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.gtab:hover {
+    background: rgba(230, 104, 59, 0.12);
+    border-color: rgba(230, 104, 59, 0.3);
+    color: #e6683b;
+}
+
+.gtab.active {
+    background: #e6683b;
+    border-color: #e6683b;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(230, 104, 59, 0.35);
+}
+
+/* ---------- Close button ---------- */
+.gmodal-close {
+    margin-left: auto;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.gmodal-close:hover {
+    background: #e6683b;
+    border-color: #e6683b;
+    color: #ffffff;
+}
+
+/* ---------- Body ---------- */
+.gmodal-body {
+    padding: 28px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    overflow-y: auto;
+    max-height: calc(90vh - 100px);
+}
+
+/* ---------- Sub-group ---------- */
+.gmodal-group-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e6683b;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(230, 104, 59, 0.2);
+    width: 100%;
+}
+
+.gmodal-group-label i {
+    font-size: 15px;
+}
+
+/* ---------- Image grid ---------- */
+.gmodal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+/* Portrait grid for signages */
+.gmodal-grid--portrait {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+/* ---------- Image item ---------- */
+.gmodal-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.gmodal-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+    border-color: rgba(230, 104, 59, 0.4);
+}
+
+.gmodal-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gmodal-grid--portrait .gmodal-item img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.gmodal-item:hover img {
+    transform: scale(1.04);
+}
+
+.gmodal-item figcaption {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748b;
+    padding: 8px 12px 10px;
+    line-height: 1.4;
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    animation: lbFadeIn 0.25s ease both;
+}
+
+@keyframes lbFadeIn {
+    from { opacity: 0; transform: scale(0.94); }
+    to   { opacity: 1; transform: scale(1);    }
+}
+
+#lightboxCaption {
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+    max-width: 500px;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.lightbox-close:hover {
+    background: #e6683b;
+    border-color: #e6683b;
+}
+
+/* ==========================================================================
    Responsive Media Queries
    ========================================================================== */
 @media (max-width: 768px) {
@@ -382,6 +670,157 @@ nav ul li a.active {
 
     .section-title h2 {
         font-size: 32px;
+    }
+
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .category-title-wrap h3 {
+        font-size: 21px;
+    }
+
+    .category-nav-pills {
+        gap: 8px;
+    }
+
+    .cat-pill {
+        font-size: 13px;
+        padding: 7px 15px;
+    }
+
+    /* GD sub-groups on mobile */
+    .gd-mini-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .gd-subgroup-card {
+        padding: 18px 16px 20px;
+    }
+
+    .gd-subgroup-label {
+        font-size: 13px;
+    }
+}
+
+/* ---------- Web project items inside modal ---------- */
+.web-project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.web-project-header {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.web-project-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(230, 104, 59, 0.12);
+    border: 1px solid rgba(230, 104, 59, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #e6683b;
+}
+
+.web-project-meta h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.web-project-meta p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #94a3b8;
+    margin-bottom: 14px;
+}
+
+.web-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.web-tech-stack span {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 3px 11px;
+    border-radius: 20px;
+}
+
+.web-project-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-left: 70px;
+}
+
+.web-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 1px;
+}
+
+/* Modal responsive */
+@media (max-width: 600px) {
+    .gmodal-header {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .gmodal-title {
+        font-size: 15px;
+    }
+
+    .gtab {
+        font-size: 11px;
+        padding: 5px 11px;
+    }
+
+    .gmodal-body {
+        padding: 20px 16px 24px;
+        gap: 28px;
+    }
+
+    .gmodal-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .gmodal-grid--portrait {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gmodal-item img {
+        height: 130px;
+    }
+
+    .gmodal-grid--portrait .gmodal-item img {
+        height: 200px;
+    }
+
+    .web-project-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .web-project-links {
+        padding-left: 0;
     }
 }
 
@@ -534,7 +973,7 @@ nav ul li a.active {
         gap: 10px;
         text-align: center;
     }
-    
+
     .footer-nav {
         flex-wrap: wrap;
         justify-content: center;

@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../CSS_folder/project.css">
 </head>
+
 <body>
     <div class="main">
         <header class="navbar">
@@ -57,41 +60,32 @@
             </div>
 
             <div class="cards-grid">
-                <!-- Card 1: Web Dev -->
+                <!-- Card 1: Web Development -->
                 <div class="project-card" data-category="web">
-                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
                     <div class="card-content">
-                        <span class="category-tag">Web Development</span>
-                        <h3>Interactive Web Portfolio</h3>
-                        <p>A responsive, multi-page web platform featuring interactive layouts, modern typography, mobile navigation, and optimized assets.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
+                        <h3 class="card-main-title">Web Development</h3>
+                        <div class="work-subtitle">
+                            <i class="fa-solid fa-laptop-code"></i> Responsive Web Platforms
                         </div>
+                        <p>Responsive, multi-page web platforms — from personal portfolios to production client websites — built with modern HTML, CSS, and JavaScript for seamless cross-device experiences.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="https://github.com/naweabaasa/portfoliodesign" target="_blank" rel="noopener noreferrer" class="btn-card">
-                            <i class="fab fa-github"></i> Repository
-                        </a>
-                        <a href="../index.html" class="btn-card btn-outline">
-                            <i class="fas fa-eye"></i> Live View
-                        </a>
+                        <button class="btn-card" onclick="document.getElementById('webModal').classList.add('active')">
+                            <i class="fas fa-globe"></i> View Work
+                        </button>
                     </div>
                 </div>
 
-                <!-- Card 2: Python Assignment -->
+                <!-- Card 3: Python -> Python Initial Assignment -->
                 <div class="project-card" data-category="python">
                     <div class="card-icon"><i class="fa-brands fa-python"></i></div>
                     <div class="card-content">
-                        <span class="category-tag">Python</span>
-                        <h3>Python Initial Assignment</h3>
-                        <p>Core programming logic, algorithmic scripts, and automated problem-solving routines demonstrating fundamental Python concepts.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Algorithms</span>
-                            <span>CLI</span>
+                        <h3 class="card-main-title">Python</h3>
+                        <div class="work-subtitle">
+                            <i class="fa-solid fa-terminal"></i> Python Initial Assignment
                         </div>
+                        <p>Core programming logic, algorithmic scripts, and automated problem-solving routines demonstrating fundamental Python concepts.</p>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/naweabaasa/pythoninitialassignment" target="_blank" rel="noopener noreferrer" class="btn-card">
@@ -100,38 +94,32 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Graphic Design -->
+                <!-- Card 4: Graphic Design -> Visual Identity & Branding -->
                 <div class="project-card" data-category="graphics">
                     <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
                     <div class="card-content">
-                        <span class="category-tag">Graphic Design</span>
-                        <h3>Visual Identity & Branding</h3>
-                        <p>Bold visual compositions, digital branding assets, color storytelling, and graphic media crafted for impact and clarity.</p>
-                        <div class="tech-stack">
-                            <span>Design</span>
-                            <span>Color Theory</span>
-                            <span>Branding</span>
+                        <h3 class="card-main-title">Graphic Design</h3>
+                        <div class="work-subtitle">
+                            <i class="fa-solid fa-pen-nib"></i> Visual Identity &amp; Branding
                         </div>
+                        <p>Bold visual compositions, digital branding assets, color storytelling, and graphic media crafted for impact and clarity — including signages, mockups, business cards, and direct print designs.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="../images_folder/gd.png" target="_blank" class="btn-card">
-                            <i class="fas fa-image"></i> View Graphic
-                        </a>
+                        <button class="btn-card" id="openGalleryBtn" onclick="document.getElementById('graphicsModal').classList.add('active')">
+                            <i class="fas fa-images"></i> View Work
+                        </button>
                     </div>
                 </div>
 
-                <!-- Card 4: Data Science -->
+                <!-- Card 5: Data Science -> Exploratory Data Analysis -->
                 <div class="project-card" data-category="datascience">
                     <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
                     <div class="card-content">
-                        <span class="category-tag">Data Science</span>
-                        <h3>Exploratory Data Analysis</h3>
-                        <p>Dataset inspection, pattern recognition, and statistical visualization turning raw numbers into meaningful insights and models.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Analytics</span>
-                            <span>DataViz</span>
+                        <h3 class="card-main-title">Data Science</h3>
+                        <div class="work-subtitle">
+                            <i class="fa-solid fa-chart-line"></i> Exploratory Data Analysis
                         </div>
+                        <p>Dataset inspection, pattern recognition, and statistical visualization turning raw numbers into meaningful insights and models.</p>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" class="btn-card">
@@ -140,18 +128,15 @@
                     </div>
                 </div>
 
-                <!-- Card 5: Mathematical Computing -->
+                <!-- Card 6: Mathematical Computing -> Numerical Methods & Logic -->
                 <div class="project-card" data-category="math">
                     <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
                     <div class="card-content">
-                        <span class="category-tag">Mathematical Computing</span>
-                        <h3>Numerical Methods & Logic</h3>
-                        <p>Computational problem solving, modeling real-world problems with numerical methods, precision logic, and algorithmic reasoning.</p>
-                        <div class="tech-stack">
-                            <span>Math</span>
-                            <span>Logic</span>
-                            <span>Computing</span>
+                        <h3 class="card-main-title">Mathematical Computing</h3>
+                        <div class="work-subtitle">
+                            <i class="fa-solid fa-square-root-variable"></i> Numerical Methods & Logic
                         </div>
+                        <p>Computational problem solving, modeling real-world problems with numerical methods, precision logic, and algorithmic reasoning.</p>
                     </div>
                     <div class="card-footer">
                         <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" class="btn-card">
@@ -180,10 +165,14 @@
                     </ul>
 
                     <div class="footer-socials">
-                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/AbaasaNawe25903" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/naweabaasa" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/naweabaasa" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nawe-abaasa-955109384/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/AbaasaNawe25903" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/naweabaasa" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -195,7 +184,221 @@
         </footer>
     </div>
 
+
+    <!-- ============================================================ -->
+    <!-- Web Development Modal                                         -->
+    <!-- ============================================================ -->
+    <div id="webModal" class="gmodal-overlay" role="dialog" aria-modal="true" aria-label="Web Development Projects">
+        <div class="gmodal-box">
+
+            <!-- Header -->
+            <div class="gmodal-header">
+                <div class="gmodal-title">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Web Development Projects</span>
+                </div>
+                <button class="gmodal-close" onclick="document.getElementById('webModal').classList.remove('active')" aria-label="Close">&times;</button>
+            </div>
+
+            <!-- Body -->
+            <div class="gmodal-body">
+
+                <!-- Project: Interactive Web Portfolio -->
+                <div class="web-project-item">
+                    <div class="web-project-header">
+                        <div class="web-project-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="web-project-meta">
+                            <h3>Interactive Web Portfolio</h3>
+                            <p>A responsive, multi-page web platform featuring interactive layouts, modern typography, mobile navigation, and optimized assets built entirely with HTML5, CSS3 and vanilla JavaScript.</p>
+                        </div>
+                    </div>
+                    <div class="web-project-links">
+                        <a href="https://github.com/naweabaasa/portfoliodesign" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                        <a href="../index.html" class="btn-card btn-outline">
+                            <i class="fas fa-eye"></i> Live View
+                        </a>
+                    </div>
+                </div>
+
+                <div class="web-divider"></div>
+
+                <!-- Project: Breadwise Bakery -->
+                <div class="web-project-item">
+                    <div class="web-project-header">
+                        <div class="web-project-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                        <div class="web-project-meta">
+                            <h3>Breadwise Bakery</h3>
+                            <p>A clean, appetizing production bakery website highlighting artisan breads, pastries, product showcases, and seamless customer engagement across all devices.</p>
+                        </div>
+                    </div>
+                    <div class="web-project-links">
+                        <a href="https://breadwisebakery.com/" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fas fa-arrow-up-right-from-square"></i> Visit Website
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <!-- Graphics Modal Gallery                                        -->
+    <!-- ============================================================ -->
+    <div id="graphicsModal" class="gmodal-overlay" role="dialog" aria-modal="true" aria-label="Graphics Gallery">
+        <div class="gmodal-box">
+
+            <!-- Modal Header -->
+            <div class="gmodal-header">
+                <div class="gmodal-title">
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Graphic Design Work</span>
+                </div>
+                <!-- Category filter tabs inside modal -->
+                <div class="gmodal-tabs">
+                    <button class="gtab active" data-tab="all">All</button>
+                    <button class="gtab" data-tab="business-cards"><i class="fa-solid fa-id-card"></i> Business Cards</button>
+                    <button class="gtab" data-tab="mockups"><i class="fa-solid fa-layer-group"></i> Mockups</button>
+                    <button class="gtab" data-tab="signages"><i class="fa-solid fa-rectangle-ad"></i> Signages</button>
+                    <button class="gtab" data-tab="direct-designs"><i class="fa-solid fa-pen-ruler"></i> Direct Designs</button>
+                </div>
+                <button class="gmodal-close" onclick="document.getElementById('graphicsModal').classList.remove('active')" aria-label="Close gallery">&times;</button>
+            </div>
+
+            <!-- Modal Body — Image Grid -->
+            <div class="gmodal-body">
+
+                <!-- Business Cards -->
+                <div class="gmodal-group" data-group="business-cards">
+                    <div class="gmodal-group-label"><i class="fa-solid fa-id-card"></i> Business Cards</div>
+                    <div class="gmodal-grid">
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/businesscard1.jpg" alt="Aura Vista – Flat Card Design" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Flat Card Design</figcaption>
+                        </figure>
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/businesscard2.jpg" alt="Aura Vista – Alternate Card Layout" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Alternate Layout</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Mockups -->
+                <div class="gmodal-group" data-group="mockups">
+                    <div class="gmodal-group-label"><i class="fa-solid fa-layer-group"></i> Mockups</div>
+                    <div class="gmodal-grid">
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/mockup1.jpg" alt="3D Stack Mockup" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>3D Stack Mockup</figcaption>
+                        </figure>
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/mockup2.jpg" alt="Perspective Mockup" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Perspective Mockup</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Signages -->
+                <div class="gmodal-group" data-group="signages">
+                    <div class="gmodal-group-label"><i class="fa-solid fa-rectangle-ad"></i> Signages</div>
+                    <div class="gmodal-grid gmodal-grid--portrait">
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/signage1.jpg" alt="Roll-up Banner v1" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Roll-up Banner v1</figcaption>
+                        </figure>
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/signage2.jpg" alt="Roll-up Banner v2" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Roll-up Banner v2</figcaption>
+                        </figure>
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/signage3.jpg" alt="Roll-up Banner v3" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Roll-up Banner v3</figcaption>
+                        </figure>
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/signage4.jpg" alt="Roll-up Banner v4" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Roll-up Banner v4</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Direct Designs -->
+                <div class="gmodal-group" data-group="direct-designs">
+                    <div class="gmodal-group-label"><i class="fa-solid fa-pen-ruler"></i> Direct Designs</div>
+                    <div class="gmodal-grid">
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/directdesign1.jpg" alt="Billboard / Hoarding v1" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Billboard / Hoarding v1</figcaption>
+                        </figure>
+                        <figure class="gmodal-item">
+                            <img src="../images_folder/graphics/directdesign2.jpg" alt="Billboard / Hoarding v2" loading="lazy" onclick="openLightbox(this.src, this.alt)">
+                            <figcaption>Billboard / Hoarding v2</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </div><!-- /gmodal-body -->
+        </div><!-- /gmodal-box -->
+    </div><!-- /graphicsModal -->
+
+    <!-- Lightbox (full-size image viewer) -->
+    <div id="lightbox" class="lightbox-overlay" onclick="this.classList.remove('active')">
+        <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('active')" aria-label="Close">&times;</button>
+        <img id="lightboxImg" src="" alt="">
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <!-- Gallery + Lightbox Script -->
+    <script>
+        /* ---------- Modal tab filtering ---------- */
+        document.querySelectorAll('.gtab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var target = this.dataset.tab;
+
+                // Activate tab
+                document.querySelectorAll('.gtab').forEach(function(t) { t.classList.remove('active'); });
+                this.classList.add('active');
+
+                // Show/hide groups
+                document.querySelectorAll('.gmodal-group').forEach(function(group) {
+                    if (target === 'all' || group.dataset.group === target) {
+                        group.style.display = '';
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        /* ---------- Close modal on overlay click ---------- */
+        document.getElementById('graphicsModal').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+
+        /* ---------- Lightbox ---------- */
+        function openLightbox(src, alt) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxImg').alt = alt;
+            document.getElementById('lightboxCaption').textContent = alt;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        /* ---------- Close webModal on overlay click ---------- */
+        document.getElementById('webModal').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+
+        /* ---------- Close modal / lightbox on ESC ---------- */
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('webModal').classList.remove('active');
+                document.getElementById('graphicsModal').classList.remove('active');
+                document.getElementById('lightbox').classList.remove('active');
+            }
+        });
+    </script>
     <!-- Reactive Script -->
     <script src="../java_script_folder/script.js"></script>
 </body>
+
 </html>

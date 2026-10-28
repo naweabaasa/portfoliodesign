@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function type() {
             const currentRole = roles[roleIndex];
-            
+
             if (isDeleting) {
                 dynamicText.textContent = currentRole.substring(0, charIndex - 1);
                 charIndex--;
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.style.transform = 'translateY(15px) scale(0.95)';
                         setTimeout(() => {
                             card.style.display = 'none';
-                        }, 300);
+                        }, 250);
                     }
                 });
             });
