@@ -516,53 +516,106 @@ nav ul li a.active {
     gap: 16px;
 }
 
-/* Portrait grid for signages */
-.gmodal-grid--portrait {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+/* ---------- Natural Image Showcases without card clipping ---------- */
+.gmodal-showcase {
+    width: 100%;
 }
 
-/* ---------- Image item ---------- */
-.gmodal-item {
-    margin: 0;
+.gmodal-single-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gmodal-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
-    border-color: rgba(230, 104, 59, 0.4);
+.gmodal-single-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(230, 104, 59, 0.5);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
-.gmodal-item img {
+.gmodal-single-card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+    max-width: 680px;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    filter: brightness(1.08) contrast(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.gmodal-grid--portrait .gmodal-item img {
-    height: 260px;
-    object-fit: cover;
+.gmodal-single-card img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.12) contrast(1.08);
 }
 
-.gmodal-item:hover img {
-    transform: scale(1.04);
+.gmodal-grid-natural {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    align-items: start;
 }
 
-.gmodal-item figcaption {
-    font-size: 12px;
-    font-weight: 500;
-    color: #64748b;
-    padding: 8px 12px 10px;
-    line-height: 1.4;
+.gmodal-natural-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gmodal-natural-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(230, 104, 59, 0.5);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gmodal-natural-item img {
+    width: 100%;
+    height: auto;
+    max-height: 440px;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    filter: brightness(1.08) contrast(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gmodal-natural-item img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.12) contrast(1.08);
+}
+
+.gmodal-card-info {
+    width: 100%;
+    text-align: left;
+}
+
+.gmodal-card-info h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+}
+
+.gmodal-card-info p {
+    font-size: 12.5px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* ---------- Lightbox ---------- */
@@ -584,12 +637,15 @@ nav ul li a.active {
 }
 
 .lightbox-overlay img {
-    max-width: 90vw;
-    max-height: 80vh;
+    max-width: 92vw;
+    max-height: 84vh;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
     animation: lbFadeIn 0.25s ease both;
+    filter: brightness(1.04) contrast(1.03);
+    image-rendering: -webkit-optimize-contrast;
+}
 }
 
 @keyframes lbFadeIn {

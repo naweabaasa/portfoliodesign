@@ -261,83 +261,83 @@
                     <button class="gtab" data-tab="business-cards"><i class="fa-solid fa-id-card"></i> Business Cards</button>
                     <button class="gtab" data-tab="mockups"><i class="fa-solid fa-layer-group"></i> Mockups</button>
                     <button class="gtab" data-tab="signages"><i class="fa-solid fa-rectangle-ad"></i> Signages</button>
-                    <button class="gtab" data-tab="direct-designs"><i class="fa-solid fa-pen-ruler"></i> Direct Designs</button>
+                    <button class="gtab" data-tab="actual-designs"><i class="fa-solid fa-pen-ruler"></i> Actual Designs</button>
                 </div>
                 <button class="gmodal-close" onclick="document.getElementById('graphicsModal').classList.remove('active')" aria-label="Close gallery">&times;</button>
             </div>
 
-            <!-- Modal Body — Image Grid -->
+            <!-- Modal Body - Grouped Showcase -->
             <div class="gmodal-body">
 
-                <!-- Business Cards -->
+                <!-- 1. Business Cards -->
                 <div class="gmodal-group" data-group="business-cards">
                     <div class="gmodal-group-label"><i class="fa-solid fa-id-card"></i> Business Cards</div>
-                    <div class="gmodal-grid">
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/businesscard1.jpg" alt="Aura Vista – Flat Card Design" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Flat Card Design</figcaption>
-                        </figure>
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/businesscard2.jpg" alt="Aura Vista – Alternate Card Layout" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Alternate Layout</figcaption>
-                        </figure>
+                    <div class="gmodal-showcase">
+                        <div class="gmodal-single-card">
+                            <img src="../images_folder/graphics/business_card.jpg" alt="Aura Vista Interiors - Business Card (Front & Back)" onclick="openLightbox(this.src, this.alt)">
+                            <div class="gmodal-card-info">
+                                <h4>Aura Vista Interiors — Business Card</h4>
+                                <p>Front and back corporate identity card layout featuring luxury emerald green and gold typography.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Mockups -->
+                <!-- 2. Mockups -->
                 <div class="gmodal-group" data-group="mockups">
                     <div class="gmodal-group-label"><i class="fa-solid fa-layer-group"></i> Mockups</div>
-                    <div class="gmodal-grid">
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/mockup1.jpg" alt="3D Stack Mockup" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>3D Stack Mockup</figcaption>
-                        </figure>
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/mockup2.jpg" alt="Perspective Mockup" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Perspective Mockup</figcaption>
-                        </figure>
+                    <div class="gmodal-grid-natural">
+                        <div class="gmodal-natural-item">
+                            <img src="../images_folder/graphics/business_card_mockup.jpg" alt="Aura Vista - Business Card 3D Stack Mockup" onclick="openLightbox(this.src, this.alt)">
+                            <div class="gmodal-card-info">
+                                <h4>Business Card Perspective Mockup</h4>
+                                <p>3D embossed business card stack presentation.</p>
+                            </div>
+                        </div>
+                        <div class="gmodal-natural-item">
+                            <img src="../images_folder/graphics/signage_mockup.jpg" alt="Aura Vista - Roll-up Banner Stand Mockup" onclick="openLightbox(this.src, this.alt)">
+                            <div class="gmodal-card-info">
+                                <h4>Roll-up Banner Stand Mockup</h4>
+                                <p>In-situ promotional pull-up banner display.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Signages -->
+                <!-- 3. Signages -->
                 <div class="gmodal-group" data-group="signages">
                     <div class="gmodal-group-label"><i class="fa-solid fa-rectangle-ad"></i> Signages</div>
-                    <div class="gmodal-grid gmodal-grid--portrait">
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/signage1.jpg" alt="Roll-up Banner v1" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Roll-up Banner v1</figcaption>
-                        </figure>
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/signage2.jpg" alt="Roll-up Banner v2" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Roll-up Banner v2</figcaption>
-                        </figure>
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/signage3.jpg" alt="Roll-up Banner v3" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Roll-up Banner v3</figcaption>
-                        </figure>
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/signage4.jpg" alt="Roll-up Banner v4" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Roll-up Banner v4</figcaption>
-                        </figure>
+                    <div class="gmodal-showcase">
+                        <div class="gmodal-single-card">
+                            <img src="../images_folder/graphics/signage_direct_design.jpg" alt="Aura Vista - Exterior Signage / Billboard" onclick="openLightbox(this.src, this.alt)">
+                            <div class="gmodal-card-info">
+                                <h4>Exterior Signage / Billboard</h4>
+                                <p>Wide-format branded signage board featuring luxury branding, gold geometry, and contact details.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Direct Designs -->
-                <div class="gmodal-group" data-group="direct-designs">
-                    <div class="gmodal-group-label"><i class="fa-solid fa-pen-ruler"></i> Direct Designs</div>
-                    <div class="gmodal-grid">
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/directdesign1.jpg" alt="Billboard / Hoarding v1" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Billboard / Hoarding v1</figcaption>
-                        </figure>
-                        <figure class="gmodal-item">
-                            <img src="../images_folder/graphics/directdesign2.jpg" alt="Billboard / Hoarding v2" loading="lazy" onclick="openLightbox(this.src, this.alt)">
-                            <figcaption>Billboard / Hoarding v2</figcaption>
-                        </figure>
+                <!-- 4. Actual Designs -->
+                <div class="gmodal-group" data-group="actual-designs">
+                    <div class="gmodal-group-label"><i class="fa-solid fa-pen-ruler"></i> Actual Designs</div>
+                    <div class="gmodal-grid-natural">
+                        <div class="gmodal-natural-item">
+                            <img src="../images_folder/graphics/signage_banner.jpg" alt="Aura Vista - Roll-up Banner Actual Design" onclick="openLightbox(this.src, this.alt)">
+                            <div class="gmodal-card-info">
+                                <h4>Roll-up Banner Actual Design</h4>
+                                <p>Complete vertical banner artwork and vector typography design for print production.</p>
+                            </div>
+                        </div>
+                        <div class="gmodal-natural-item">
+                            <img src="../images_folder/graphics/business_card.jpg" alt="Aura Vista - Business Card Print Artwork" onclick="openLightbox(this.src, this.alt)">
+                            <div class="gmodal-card-info">
+                                <h4>Business Card Print Ready Artwork</h4>
+                                <p>Direct vector artwork for double-sided business card printing.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-            </div><!-- /gmodal-body -->
+                </div></div><!-- /gmodal-body -->
         </div><!-- /gmodal-box -->
     </div><!-- /graphicsModal -->
 
